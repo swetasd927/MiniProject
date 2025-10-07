@@ -2,6 +2,7 @@ This mini project demonstrates a full authentication flow using Express, MongoDB
 Users can write post.
 
 Features
+
     **User Management**
         User registration
         User login
@@ -11,7 +12,3 @@ Features
         Create posts
         Like posts
         Delete posts (only by post owner)
-
-**LoginAccount**
-gmail: saanya@gmail.com
-pass: 123
