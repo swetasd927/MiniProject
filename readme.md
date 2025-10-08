@@ -111,5 +111,5 @@ Fork it → Create a branch → Commit your changes → Submit a PR!
 Your feedback and contributions are always welcome 💬
 
 ## 📜 License
-This project is open-source and available under the **MIT License**.
-Would you like me to include **GitHub badges (for tech stack, license, stars, etc.)** and a small **project demo section** with fake screenshots placeholders to make it look like a professional portfolio project?
+## 📜 License
+This project is licensed under the MIT License © 2025 Sweta Dahal
