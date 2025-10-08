@@ -111,5 +111,4 @@ Fork it → Create a branch → Commit your changes → Submit a PR!
 Your feedback and contributions are always welcome 💬
 
 ## 📜 License
-## 📜 License
 This project is licensed under the MIT License © 2025 Sweta Dahal
