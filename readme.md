@@ -1,21 +1,26 @@
 # 🌐 Mini Social Media App
+### *(Node.js + Express + EJS + MongoDB + JWT + Multer)*
 
-### *(Node.js + Express + EJS + MongoDB + JWT)*
+A **fully functional mini social media web app** built with **Node.js, Express, EJS, MongoDB, JWT authentication, and Multer for profile picture uploads**.
+Users can **register, log in, create/edit posts, like/unlike posts, and upload a profile picture**, all securely handled.
 
-A **simple yet complete mini social media web app** built with **Node.js, Express, EJS, MongoDB, and JWT authentication**.
-Users can **register, log in, create posts, edit, update, like/unlike, and delete posts** — all securely handled using **JWT and cookies**.
+---
 
 ## ✨ Features
 
 ### 🔐 User Management
-* 👤 **Register, Login & Logout** users
-* 🔒 **JWT-based Authentication** with cookie storage
-* 🔐 **Protected Routes** — only logged-in users can access profiles
+
+* 👤 **Register, Login & Logout**
+* 🔒 **JWT Authentication** stored in cookies
+* 🔐 **Protected Routes** — only authenticated users can access profiles
+* 🖼️ **Profile Picture Upload** using **Multer with disk storage**
 
 ### 📝 Post Management
+
 * 🖊️ **Create, Edit & Update Posts**
-* ❤️ **Like & Unlike** functionality
-* 🗑️ **Delete Posts** (only by the post owner)
+* ❤️ **Like & Unlike** posts
+
+---
 
 ## 🧩 Tech Stack
 
@@ -27,12 +32,15 @@ Users can **register, log in, create posts, edit, update, like/unlike, and delet
 | Authentication    | **JWT (jsonwebtoken)**                  |
 | Password Security | **bcrypt**                              |
 | Cookies           | **cookie-parser**                       |
+| File Upload       | **Multer (Disk Storage)**               |
+| Security/Unique   | **crypto** for unique filenames         |
 
 ---
 
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
+
 ```bash
 git clone https://github.com/<your-username>/<repo-name>.git
 cd <repo-name>
@@ -45,7 +53,9 @@ npm install
 ```
 
 ### 3️⃣ Add environment variables
-Create a `.env` file in the project root:
+
+Create a `.env` file in the root directory:
+
 ```env
 MONGO_URI=your_mongodb_connection
 JWT_SECRET=your_secret_key
@@ -57,16 +67,22 @@ JWT_SECRET=your_secret_key
 node app.js
 ```
 
-Then open 👉 **[http://localhost:3000](http://localhost:3000)**
+Open in your browser 👉 **[http://localhost:3000](http://localhost:3000)**
+
+---
 
 ## 🧠 How It Works
-1. **Registration** → Users register with username, email & password (hashed using bcrypt).
-2. **Login** → A JWT token is generated and stored as a cookie.
-3. **Protected Routes** → Middleware verifies JWT before allowing access.
-4. **Posts** → Users can create, edit, delete, and like/unlike posts.
-5. **Ownership Check** → Only post owners can delete or edit their posts.
+
+1. **Registration:** Users sign up with username, email, and password (hashed with bcrypt).
+2. **Login:** JWT token is generated and stored in cookies.
+3. **Protected Routes:** Middleware verifies JWT before access.
+4. **Profile Picture:** Users can upload a profile picture; Multer stores it with a unique filename using **crypto**.
+5. **Posts:** Users can create, edit, and like/unlike posts.
+
+---
 
 ## 📁 Folder Structure
+
 ```
 ├── models/
 │   ├── user.js
@@ -78,6 +94,7 @@ Then open 👉 **[http://localhost:3000](http://localhost:3000)**
 │   ├── profile.ejs
 │   └── edit.ejs
 ├── public/
+│   └── images/uploads/       # profile images
 ├── app.js
 └── package.json
 ```
@@ -85,30 +102,30 @@ Then open 👉 **[http://localhost:3000](http://localhost:3000)**
 ---
 
 ## 💡 Key Learnings
+
 * Implementing **JWT Authentication** in Express
 * Using **bcrypt** for password hashing
 * Creating **protected routes** with middleware
-* Handling **CRUD operations** in MongoDB
-* Managing **likes/unlikes** and ownership logic
-
-## 📸 Preview (optional)
-Add your app screenshots here:
-
-```
-/assets/screenshots/
-```
+* Handling **CRUD operations** (except delete) in MongoDB
+* Managing **likes/unlikes** and post editing
+* Uploading and serving **profile images using Multer** with **disk storage**
+* Generating **unique filenames** using **crypto**
 
 ---
 
 ## 👩‍💻 Author
+
 **Sweta Dahal**
 🎓 B.Sc. CSIT Student | 💻 MERN Stack Learner
 🌐 [YouTube: Sweta Dahal](https://www.youtube.com/@SwetaDahal)
 
+---
+
 ## 🤝 Contribute
+
 Want to improve this project?
-Fork it → Create a branch → Commit your changes → Submit a PR!
-Your feedback and contributions are always welcome 💬
+Fork → Create a branch → Commit → Submit a PR.
+Feedback and contributions are always welcome! 💬
 
 ## 📜 License
-This project is licensed under the MIT License © 2025 Sweta Dahal
+This project is licensed under the **MIT License © 2025 Sweta Dahal**
