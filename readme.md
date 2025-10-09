@@ -1,9 +1,4 @@
-Got it! Let’s remove the delete part and polish your README so it’s **accurate and professional**. Here’s the updated version:
-
----
-
 # 🌐 Mini Social Media App
-
 ### *(Node.js + Express + EJS + MongoDB + JWT + Multer)*
 
 A **fully functional mini social media web app** built with **Node.js, Express, EJS, MongoDB, JWT authentication, and Multer for profile picture uploads**.
